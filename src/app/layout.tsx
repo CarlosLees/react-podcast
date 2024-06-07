@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 
 import '@/style/index.css';
 
-import ConvexClientProvider from '@/app/ConvexClientProvider';
+import ConvexClerkProvider from '@/app/ConvexClerkProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,7 +24,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <ConvexClientProvider>{children}</ConvexClientProvider>
+                <ConvexClerkProvider>{children}</ConvexClerkProvider>
             </body>
         </html>
     );
