@@ -15,8 +15,12 @@ const nextConfig = {
                 hostname: "t7.baidu.com"
             },
             {
-                protocol:"https",
+                protocol: "https",
                 hostname: "avatars.githubusercontent.com"
+            },
+            {
+                protocol: "https",
+                hostname: "lovely-flamingo-139.convex.cloud"
             }
         ]
     }

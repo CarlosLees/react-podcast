@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import LeftSidebar from '@/components/leftSidebar/LeftSidebar';
+import RightSidebar from '@/components/rightSidebar/RightSidebar';
 
 export default function RootLayout({
     children,
@@ -16,7 +17,7 @@ export default function RootLayout({
                         <div className="flex flex-col md:pb-14">{children}</div>
                     </div>
                 </section>
-                Right Sidebar
+                <RightSidebar />
             </main>
         </div>
     );
