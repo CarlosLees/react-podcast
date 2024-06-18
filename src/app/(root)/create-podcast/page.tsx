@@ -8,6 +8,8 @@ import { useForm } from 'react-hook-form';
 
 import { useState } from 'react';
 
+import { Loader } from 'lucide-react';
+
 import {
     Form,
     FormControl,
@@ -44,6 +46,7 @@ const formSchema = z.object({
 
 const CreatePodcast = () => {
     const [voiceType, setVoiceType] = useState<string>();
+    const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
     // 1. Define your form.
     const form = useForm<z.infer<typeof formSchema>>({
@@ -141,7 +144,14 @@ const CreatePodcast = () => {
                                 className="text-16 w-full bg-orange-1 py-4 font-extrabold text-white-1
                                 transition-all duration-500 hover:bg-black-1"
                             >
-                                Submit
+                                {isSubmitting ? (
+                                    <>
+                                        Submitting
+                                        <Loader size={20} className="animate-spin mr-2" />
+                                    </>
+                                ) : (
+                                    'Publish Post'
+                                )}
                             </Button>
                         </div>
                     </div>
